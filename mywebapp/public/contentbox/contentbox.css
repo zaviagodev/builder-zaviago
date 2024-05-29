@@ -786,9 +786,9 @@ body.controlpanel .is-content-view.mobile {
   height: 43px;
   line-height: 1.7;
   color: #4a4a4a;
-  border-radius: 5px;
+  border-radius: 13px !important;
+  box-shadow: none;
   border: none;
-  background-color: #f6f6f6;
   width: auto;
   display: inline-block;
   background-image: none;
@@ -796,7 +796,6 @@ body.controlpanel .is-content-view.mobile {
   -moz-appearance: menulist;
   appearance: menulist;
   padding: 0 5px;
-  border-radius: 1px;
   cursor: pointer;
 }
 .builder-ui input[type=text]:focus,
@@ -807,7 +806,8 @@ body.controlpanel .is-content-view.mobile {
   box-shadow: none;
 }
 
-.builder-ui .panel-text .group {
+.builder-ui .panel-text .submain .group,
+.builder-ui .panel-box #boxcontent2 .subpanel .group  {
   width:100%;
   justify-content:space-between
 }
@@ -1042,6 +1042,7 @@ body.controlpanel .is-wrapper {
   transition: all 0.3s ease;
   box-shadow: none;
   border-radius:17px;
+  scrollbar-width: none;
 }
 
 .builder-ui .is-controlpanel::before {
@@ -1128,6 +1129,7 @@ body.controlpanel .is-wrapper {
 }
 .builder-ui .is-controlpanel [class^=panel-] .subpanel {
   padding: 14px 24px 15px;
+  width:100%;
 }
 .builder-ui .is-controlpanel [class^=panel-] .last .subpanel {
   padding: 14px 24px 30px;
@@ -1824,7 +1826,7 @@ body.controlpanel:not(.shift-off) .custom-topbar > div:nth-child(2) {
 }
 
 .dark .custom-topbar {
-  background: rgb(24, 24, 24);
+  background: #1A1A1C;
 }
 
 .custom-topbar .separator {
@@ -1941,7 +1943,7 @@ body.frame-center.controlpanel .is-content-view {
   background: transparent !important;
 }
 .dark #editPanel, .dark .is-content-view {
-  background: #a3a3a3;
+  background: #a3a3a3 !important;
 }
 .dark .is-content-view > div {
   background: #5d5d5d;
