@@ -23,7 +23,7 @@ var EditPanel = (function () {
                       height:100vh;
                       position:fixed;
                       top:0;
-                      background:#f5f5f5;
+                      background:#EBEBEB;
                   }
 
                   .is-responsive-tool {

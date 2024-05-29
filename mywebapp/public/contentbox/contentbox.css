@@ -1843,6 +1843,7 @@ body.frame-center #editPanel {
   justify-content: center !important;
   width: 100vw !important;
   left: 0 !important;
+  background: #EBEBEB !important;
 }
 
 body.frame-center .is-content-view {

@@ -401,7 +401,7 @@ button:focus-visible {
 }
 #_cbhtml .is-area background,
 .is-ui .is-area background {
-  background: #fff !important;
+  background: rgba(248, 247, 247, 0.67) !important;
 }
 #_cbhtml .is-area button,
 .is-ui .is-area button {
@@ -414,7 +414,7 @@ button:focus-visible {
 #_cbhtml .is-area-2nd,
 .is-ui .is-area-2nd {
   color: #000 !important;
-  background: #fff !important;
+  background: rgba(248, 247, 247, 0.67) !important;
 }
 #_cbhtml .is-area-2nd button,
 .is-ui .is-area-2nd button {
@@ -431,7 +431,7 @@ button:focus-visible {
   position: absolute;
   top: 0;
   left: 0;
-  background: #fff;
+  background: rgba(248, 247, 247, 0.67);
   border: 1px solid #f2f2f2;
   box-shadow: 4px 17px 20px 0px rgba(0, 0, 0, 0.08);
   outline: none;
