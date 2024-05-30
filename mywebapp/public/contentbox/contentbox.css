@@ -807,6 +807,10 @@ body.controlpanel .is-content-view.mobile {
   justify-content:space-between
 }
 
+.builder-ui .panel-text .submain .mr-8 .group {
+  width:fit-content;
+}
+
 .builder-ui .group {
   margin-bottom: 11px;
   border-radius: 10px;
@@ -1138,14 +1142,13 @@ body.controlpanel .is-wrapper {
   height: auto;
   background-color: #fff;
   display: none;
-  border-radius: 4px;
+  border-radius: 7px;
   overflow: hidden;
   flex-wrap: wrap;
   padding: 2px;
   box-sizing: border-box;
   flex: none;
   flex-direction: row;
-  border: 1px solid #d1d1d1;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.08);
 }
 .builder-ui .is-controlpanel [class^=panel-].panel-pop button {
@@ -1379,11 +1382,13 @@ body.controlpanel .is-wrapper {
   width: 100%;
   position: fixed;
   top: 0;
-  right: 0;
-  width: 290px;
+  right: 8px;
+  width: 380px;
   height: 100%;
   display: none;
-  background-color: #fff;
+  background-color: rgba(248, 247, 247, 0.67);
+  backdrop-filter:blur(20px);
+  border-radius:17px;
   overflow-y: auto;
 }
 .builder-ui .is-controlpanel .panel-dialog button.btn-back {
@@ -1537,8 +1542,8 @@ body.controlpanel .is-wrapper {
   font-size: 13px;
 }
 .builder-ui .is-controlpanel .panel-dialog.element .is-btn-color, .builder-ui .is-controlpanel .panel-dialog.blockoptions .is-btn-color {
-  width: 35px;
-  height: 33px;
+  width: 59px;
+  height: 56px;
 }
 .builder-ui .is-controlpanel .panel-dialog.shadow .div-shadow-list {
   display: flex;
@@ -1900,14 +1905,14 @@ body.frame-center.controlpanel .is-content-view {
 }
 .dark #_cbhtml .is-side input[type=text], .dark #_cbhtml .is-side textarea, .dark .is-ui .is-side input[type=text], .dark .is-ui .is-side textarea {
   color: #c7c7c7 !important;
-  background-color: #313131 !important;
+  background-color: #7676803D !important;
 }
 .dark #_cbhtml .is-side input[type=checkbox], .dark .is-ui .is-side input[type=checkbox] {
   opacity: 0.7 !important;
 }
 .dark #_cbhtml .is-side select, .dark .is-ui .is-side select {
   color: #c7c7c7 !important;
-  background-color: #313131 !important;
+  background-color: #7676803D !important;
 }
 .dark #_cbhtml .is-sidebar.is-area, .dark .is-ui .is-sidebar.is-area {
   background: #1A1A1CE0 !important;
@@ -1929,7 +1934,7 @@ body.frame-center.controlpanel .is-content-view {
   background: transparent !important;
 }
 .dark #editPanel, .dark .is-content-view {
-  background: black !important; /* Original colour: #a3a3a3 */
+  background: #262523 !important; /* Original colour: #a3a3a3 */
 }
 .dark .is-content-view > div {
   background: #5d5d5d;
@@ -1987,19 +1992,16 @@ body.frame-center.controlpanel .is-content-view {
 /* .dark .builder-ui .is-controlpanel {
   background-color: rgb(24, 24, 24);
 } */
-.dark .builder-ui .is-controlpanel::before {
+.dark .builder-ui .is-controlpanel::before,
+.dark .builder-ui .is-controlpanel .panel-dialog {
   background-color: #1A1A1CE0;
 }
 
 .dark .builder-ui .is-controlpanel [class^=panel-].panel-pop {
   background-color: rgb(24, 24, 24);
-  border: #6f6f6f 1px solid;
 }
 .dark .builder-ui .is-controlpanel .group.color-pick > div button {
   background: repeating-linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%, #aaa), repeating-linear-gradient(45deg, #aaa 25%, #fff 25%, #fff 75%, #aaa 75%, #aaa);
-}
-.dark .builder-ui .is-controlpanel .panel-dialog {
-  background-color: rgb(24, 24, 24);
 }
 .dark .builder-ui .is-controlpanel .panel-dialog.blocks .div-blocks {
   border-top: #efefef 1px solid;
@@ -2222,6 +2224,7 @@ body.frame-center.controlpanel .is-content-view {
   font-family: 'Inter', sans-serif;
   font-size: 30px;
   font-weight: 700;
+  letter-spacing:-0.2px;
 }
 
 /* 
@@ -2232,7 +2235,8 @@ body.frame-center.controlpanel .is-content-view {
         #divSidebarSource
 */
 #divSidebarSnippets {
-  max-width: 300px !important;
+  height:calc(100% - 79px) !important;
+  max-width: 380px !important;
 }
 
 #_cbhtml .snippet-item {
@@ -2240,7 +2244,7 @@ body.frame-center.controlpanel .is-content-view {
 }
 
 #divSidebarTypography {
-  max-width: 320px;
+  max-width: 380px;
 }
 
 #divSidebarSnippets > div:first-child {
@@ -2972,4 +2976,30 @@ body.fullview.topspace .is-content-view iframe {
 
 #_cbhtml .anim-controls {
   border-top: transparent 248px solid !important
+}
+
+#_cbhtml .anim-controls .flex-wrap {
+  gap:4px;
+  background:white;
+  border-radius:7px;
+  padding:2px;
+  width:fit-content
+}
+
+#_cbhtml .div-anim-apply-to .flex-wrap button,
+#_cbhtml .anim-controls .flex-wrap button {
+  box-shadow:none !important;
+}
+
+#_cbhtml .div-anim-apply-to .flex-wrap {
+  height:inherit !important;
+  gap:4px;
+  background:white;
+  border-radius:7px;
+  padding:2px;
+  width:fit-content
+}
+
+#editPanel .is-content-view {
+  background: transparent !important;
 }

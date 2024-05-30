@@ -22,8 +22,7 @@
   [multiple],
   textarea,
   select {
-    @apply w-full rounded border-gray-300 shadow-sm 
-    focus:border-indigo-500 focus:ring-indigo-500;
+    @apply w-full rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500;
   }
   [type='checkbox'],
   [type='radio'] {
@@ -2730,16 +2729,13 @@ select:focus-visible {
 }
 
 input[type=text], input[type=email] {
-  border-width: 2px;
-  --tw-border-opacity: 1;
-  border-color: rgb(17 24 39 / var(--tw-border-opacity));
-  padding: 0.5rem;
+  border: none;
+  padding: 0.5rem 12px;
   height: 45px;
+  border-radius:13px;
 }
 
 input[type=text]:focus, input[type=email]:focus {
-  outline: #00da89 2px solid;
-  outline-offset: 0;
   box-shadow: none;
   border-color: transparent;
 }

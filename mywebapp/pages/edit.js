@@ -516,6 +516,9 @@ export default function Home(props) {
                 <title>{props.title}</title>
                 <meta name="description" content={props.desc} />
                 <link rel="icon" href="/images/favicon.ico" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"></link>
             </Head>
 
             <div className="builder-ui keep-selection custom-topbar" style={{opacity:'0'}} data-tooltip>
