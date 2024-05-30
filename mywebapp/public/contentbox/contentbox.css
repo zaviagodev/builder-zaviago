@@ -22,7 +22,7 @@
 }
 
 /* large screen*/
-@media all and (min-width: 1920px) {
+/* @media all and (min-width: 1920px) {
   .is-content-view.desktop-lg {
     width: 1920px;
     height: 1080px;
@@ -326,10 +326,7 @@
   body.topspace .is-content-view {
     transform: scale(0.34);
   }
-}
-body.controlpanel .is-content-view {
-  margin-right: 290px;
-}
+} */
 body.controlpanel .is-content-view.desktop-lg {
   width: 1920px;
   height: 1080px;
@@ -351,7 +348,7 @@ body.controlpanel .is-content-view.mobile {
   width: 390px;
   height: 844px;
 }
-@media all and (min-width: 1920px) {
+/* @media all and (min-width: 1920px) {
   body.controlpanel .is-content-view.desktop-lg {
     width: 1920px;
     height: 1080px;
@@ -607,7 +604,7 @@ body.controlpanel .is-content-view.mobile {
   body.controlpanel.topspace .is-content-view.desktop-lg {
     transform: scale(0.3);
   }
-}
+} */
 
 /* /IFRAME */
 /* UI */
@@ -1023,7 +1020,6 @@ body.controlpanel .builder-ui .is-controlpanel {
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 16px 0px;
 }
 body.controlpanel .is-wrapper {
-  width: calc(100% - 290px) !important;
   margin-left: 0 !important;
 }
 
@@ -1813,10 +1809,6 @@ body.topspace .custom-topbar {
   transition: all 0.3s ease;
 }
 
-body.controlpanel:not(.shift-off) .custom-topbar > div:nth-child(2) {
-  margin-left: -245px;
-}
-
 .custom-topbar button {
   width: auto;
   height: 33px;
@@ -1845,17 +1837,16 @@ body.frame-center #editPanel {
   justify-content: center !important;
   width: 100vw !important;
   left: 0 !important;
-  background: #EBEBEB !important;
 }
 
 body.frame-center .is-content-view {
   margin-top: 25px !important;
-  transform-origin: center !important;
+  /* transform-origin: center !important; */
 }
 
 body.frame-center.controlpanel .is-content-view {
   margin-top: 25px !important;
-  transform-origin: center !important;
+  /* transform-origin: center !important; */
 }
 
 /* /CONTROL PANEL */
@@ -2872,14 +2863,11 @@ body.fullview .is-content-view.fullview iframe {
 }
 
 body.fullview #editPanel {
-  left: 61px !important;
   right: 0px !important;
   transition: all 0.3s ease;
 }
 
 body.fullview.controlpanel #editPanel {
-  left: 61px !important;
-  right: 290px !important;
   height: 100vh !important;
   width: unset !important;
   transition: all 0.3s ease;
@@ -2910,14 +2898,11 @@ body.fullview.topspace .is-content-view.fullview iframe {
 }
 
 body.fullview.frame-center #editPanel {
-  left: 61px !important;
   right: 0px !important;
   transition: all 0.3s ease;
 }
 
 body.fullview.controlpanel.frame-center:not(.shift-off) #editPanel {
-  left: 61px !important;
-  right: 290px !important;
   height: 100vh !important;
   width: unset !important;
 }

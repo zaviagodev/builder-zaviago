@@ -4076,9 +4076,7 @@ button:focus-visible {
 #_cbhtml .is-tabs,
 .is-ui .is-tabs {
   white-space: nowrap;
-  padding: 20px;
-  padding-bottom: 5px;
-  padding-top: 10px;
+  margin: 10px 20px;
   box-sizing: border-box;
   font-family: sans-serif;
   font-size: 11px;
@@ -4092,10 +4090,9 @@ button:focus-visible {
 #_cbhtml .is-tabs a,
 .is-ui .is-tabs a {
   display: inline-block;
-  padding: 3px 1px 0;
+  padding: 10px 16px;
   color: #4a4a4a;
   border-bottom: transparent 1px solid;
-  margin: 0 15px 13px 0;
   text-decoration: none;
   transition: box-shadow ease 0.3s;
   outline: none;
@@ -4105,7 +4102,6 @@ button:focus-visible {
   background: transparent;
   box-shadow: none;
   cursor: default;
-  border-bottom: #595959 1px solid;
 }
 #_cbhtml .is-tabs a:focus,
 .is-ui .is-tabs a:focus {
@@ -6090,7 +6086,7 @@ div[data-html] {
   height: 844px;
 }
 
-@media all and (min-width: 1620px) {
+/* @media all and (min-width: 1620px) {
   .is-content-view.desktop {
     width: 1420px;
     height: 887px;
@@ -6147,7 +6143,7 @@ div[data-html] {
   .is-content-view {
     transform: scale(0.62);
   }
-}
+} */
 .custom-select {
   --cs-height: 46px;
   --cs-background: #fff;
@@ -6339,6 +6335,13 @@ div[data-html] {
 .colored .div-font-list > button img {
   mix-blend-mode: screen;
   filter: invert(1);
+}
+
+.dark #_cbhtml .is-modal.is-modal-content, 
+.dark #_cbhtml .is-modal .is-modal-content, 
+.dark .is-ui .is-modal.is-modal-content, 
+.dark .is-ui .is-modal .is-modal-content {
+  background: rgba(26, 26, 28, 0.67)
 }
 
 i.bi, i.icon {
