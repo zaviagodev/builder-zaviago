@@ -2103,7 +2103,7 @@ button:focus-visible {
 .is-ui .is-modal button {
   color: #000;
   background: #fff;
-  box-shadow: 0px 3px 6px -6px rgba(0, 0, 0, 0.32);
+  border-radius:7px;
 }
 #_cbhtml .is-modal button:hover,
 .is-ui .is-modal button:hover {
@@ -3659,7 +3659,7 @@ button:focus-visible {
 .is-ui .is-side button {
   color: #000;
   background: #fff;
-  box-shadow: 0px 3px 6px -6px rgba(0, 0, 0, 0.32);
+  border-radius:99px;
 }
 #_cbhtml .is-side button:hover,
 .is-ui .is-side button:hover {
@@ -6352,7 +6352,7 @@ div[data-html] {
 .dark #_cbhtml .is-modal .is-modal-content,
 .dark .is-ui .is-modal.is-modal-content,
 .dark .is-ui .is-modal .is-modal-content {
-  background:rgba(26, 26, 28, 0.67) !important
+  background:#1A1A1CE0 !important
 }
 
 .dark #_cbhtml .is-modal.page-timeline .is-modal-bar,
@@ -6364,6 +6364,27 @@ div[data-html] {
 .dark #_cbhtml .is-modal.buttoneditor .is-modal-bar,
 .dark .is-ui .is-modal.buttoneditor .is-modal-bar {
   color:#fff
+}
+
+.dark #_cbhtml .is-tabs, 
+.dark .is-ui .is-tabs {
+  background: #7676803D;
+}
+
+.dark #_cbhtml .is-tabs a, 
+.dark .is-ui .is-tabs a {
+  color: #fff
+}
+
+.dark #_cbhtml .is-tabs a.active, 
+.dark .is-ui .is-tabs a.active {
+  background: #636366;
+}
+
+.dark .featured-categories.tabs, 
+.dark .is-design-list, 
+.dark .is-sidebar-content {
+  background: #1A1A1CE0 !important
 }
 
 i.bi, i.icon {
@@ -6398,7 +6419,3 @@ i.bi, i.icon {
     display: flex;
 }
 */
-
-.is-modal.page-timeline {
-  height: 340px !important;
-}

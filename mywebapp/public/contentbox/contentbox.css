@@ -662,9 +662,7 @@ body.controlpanel .is-content-view.mobile {
   width: 59px;
   height: 56px;
 }
-.builder-ui button.on {
-  background-color: rgb(237, 237, 237);
-}
+.builder-ui button.on,
 .builder-ui button:not(.is-btn-color):hover {
   background-color: rgb(237, 237, 237);
 }
@@ -1896,11 +1894,9 @@ body.frame-center.controlpanel .is-content-view {
   color: #d3d3d3 !important;
   background: transparent !important;
 }
-.dark #_cbhtml .is-side button:hover, .dark .is-ui .is-side button:hover {
-  background-color: rgb(69, 69, 69) !important;
-}
+.dark #_cbhtml .is-side button:hover, .dark .is-ui .is-side button:hover,
 .dark #_cbhtml .is-side button.on, .dark .is-ui .is-side button.on {
-  background-color: rgb(69, 69, 69) !important;
+  background-color: #636366 !important;
 }
 .dark #_cbhtml .is-side input[type=text], .dark #_cbhtml .is-side textarea, .dark .is-ui .is-side input[type=text], .dark .is-ui .is-side textarea {
   color: #c7c7c7 !important;
@@ -1914,7 +1910,7 @@ body.frame-center.controlpanel .is-content-view {
   background-color: #313131 !important;
 }
 .dark #_cbhtml .is-sidebar.is-area, .dark .is-ui .is-sidebar.is-area {
-  background: #181818 !important;
+  background: #1A1A1CE0 !important;
 }
 .dark #_cbhtml .is-sidebar.is-area button svg, .dark .is-ui .is-sidebar.is-area button svg {
   fill: #d3d3d3 !important;
@@ -1923,10 +1919,8 @@ body.frame-center.controlpanel .is-content-view {
   background: #545454 !important;
 }
 .dark #_cbhtml .is-area-2nd, .dark #_cbhtml #divSidebarTypography, .dark .is-ui .is-area-2nd, .dark .is-ui #divSidebarTypography {
-  background: #535353 !important;
-}
-.dark #_cbhtml #divSidebarSnippets, .dark #_cbhtml #divStyles, .dark .is-ui #divSidebarSnippets, .dark .is-ui #divStyles {
-  background: #cacaca !important;
+  background: #1A1A1CE0 !important;
+  color:#fff !important
 }
 .dark #_cbhtml .anim-preset-list button img, .dark .is-ui .anim-preset-list button img {
   opacity: 0.3 !important;
@@ -1965,11 +1959,9 @@ body.frame-center.controlpanel .is-content-view {
 .dark .builder-ui button.is-btn-color {
   border: 1px solid transparent;
 }
-.dark .builder-ui button.on {
-  background-color: rgb(69, 69, 69);
-}
+.dark .builder-ui button.on,
 .dark .builder-ui button:not(.is-btn-color):hover {
-  background-color: rgb(69, 69, 69);
+  background-color: #636366;
 }
 .dark .builder-ui .label {
   color: #d3d3d3;
@@ -1985,8 +1977,9 @@ body.frame-center.controlpanel .is-content-view {
   color: #c7c7c7;
   background-color: #313131;
 }
-.dark .builder-ui .group {
-  background-color:rgb(44, 44, 46)
+.dark .builder-ui .group,
+.dark .builder-ui .custom-select {
+  background-color:#7676803D;
 }
 /* .dark .builder-ui .accordion-item {
   background-color: #353535;
@@ -1995,7 +1988,7 @@ body.frame-center.controlpanel .is-content-view {
   background-color: rgb(24, 24, 24);
 } */
 .dark .builder-ui .is-controlpanel::before {
-  background-color: rgba(26, 26, 28, 0.67);
+  background-color: #1A1A1CE0;
 }
 
 .dark .builder-ui .is-controlpanel [class^=panel-].panel-pop {
@@ -2014,9 +2007,6 @@ body.frame-center.controlpanel .is-content-view {
 .dark .builder-ui .is-controlpanel .panel-dialog.blocks .div-blocks > div {
   outline: #d5d5d5 1px solid;
 }
-.dark .builder-ui .custom-select {
-  background: #2C2C2E;
-}
 .dark .builder-ui .custom-select .select-styled span {
   color: #fff;
 }
@@ -2024,31 +2014,31 @@ body.frame-center.controlpanel .is-content-view {
   filter: invert(1);
   opacity: 0.7;
 }
-.dark .builder-ui .custom-select .select-options {
-  background: #2C2C2EB0;
+.dark .custom-select .select-options {
+  background: #2C2C2E;
 }
-.dark .builder-ui .custom-select .select-options li {
+.dark .custom-select .select-options li {
   color: #fff;
 }
-.dark .builder-ui .custom-select .select-options li img {
+.dark .custom-select .select-options li img {
   filter: invert(1);
   opacity: 0.7;
 }
-.dark .builder-ui .scroll-darker * {
+.dark .scroll-darker * {
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) auto;
 }
-.dark .builder-ui .scroll-darker *::-webkit-scrollbar {
+.dark .scroll-darker *::-webkit-scrollbar {
   width: 12px;
 }
-.dark .builder-ui .scroll-darker *::-webkit-scrollbar-track {
+.dark .scroll-darker *::-webkit-scrollbar-track {
   background: rgba(200, 200, 200, 0.2);
 }
-.dark .builder-ui .scroll-darker *::-webkit-scrollbar-thumb {
+.dark .scroll-darker *::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.4);
 }
-.dark .builder-ui .custom-select .select-options li:hover,
-.dark .builder-ui .custom-select .select-options li.selected {
+.dark .custom-select .select-options li:hover,
+.dark .custom-select .select-options li.selected {
   background-color: #484848;
 }
 
@@ -2229,11 +2219,9 @@ body.frame-center.controlpanel .is-content-view {
 }
 
 .is-sidebar-title {
-  font-family: sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 /* 
@@ -2348,11 +2336,18 @@ body.frame-center.controlpanel .is-content-view {
 
 #divSelector {
   position: absolute;
-  top: 110px;
+  top: 120px;
   right: 0;
   width: 100%;
   z-index: 2;
   box-sizing: border-box;
+}
+#divSelector .inp-typolist.custom-select {
+  background: white;
+  border-radius: 13px;
+  box-shadow: none !important;
+  margin: 16px;
+  width: calc(100% - 32px);
 }
 #divSelector .inp-typolist.custom-select .select-styled {
   outline-offset: -2px;
@@ -2368,10 +2363,8 @@ body.frame-center.controlpanel .is-content-view {
   box-sizing: border-box;
   overflow-y: auto;
   overflow-x: hidden;
-  top: 110px;
-  left: 60px;
-  width: calc(100% - 60px);
-  height: calc(100% - 110px);
+  top: 150px;
+  height: calc(100% - 150px);
   position: absolute;
 }
 
@@ -2968,4 +2961,15 @@ body.fullview.topspace .is-content-view iframe {
 }
 #ifrIdeasPanel {
   border-radius:13px;
+}
+.dark #divSelector .inp-typolist.custom-select {
+  background: #7676803D
+}
+
+#_cbhtml .is-modal.page-timeline {
+  height: 440px !important;
+}
+
+#_cbhtml .anim-controls {
+  border-top: transparent 248px solid !important
 }
