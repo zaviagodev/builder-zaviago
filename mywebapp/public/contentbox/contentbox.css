@@ -951,6 +951,7 @@ body.controlpanel .is-content-view.mobile {
   z-index: 2;
   outline-offset: 0;
   background: var(--cs-background);
+  border-radius:10px 10px 0 0 !important;
 }
 .builder-ui .custom-select input:focus {
   outline: none;
@@ -1934,7 +1935,7 @@ body.frame-center.controlpanel .is-content-view {
   background: transparent !important;
 }
 .dark #editPanel, .dark .is-content-view {
-  background: #a3a3a3 !important;
+  background: black !important; /* Original colour: #a3a3a3 */
 }
 .dark .is-content-view > div {
   background: #5d5d5d;
@@ -1987,9 +1988,9 @@ body.frame-center.controlpanel .is-content-view {
 .dark .builder-ui .group {
   background-color:rgb(44, 44, 46)
 }
-.dark .builder-ui .accordion-item {
+/* .dark .builder-ui .accordion-item {
   background-color: #353535;
-}
+} */
 /* .dark .builder-ui .is-controlpanel {
   background-color: rgb(24, 24, 24);
 } */
@@ -2022,6 +2023,9 @@ body.frame-center.controlpanel .is-content-view {
 .dark .builder-ui .custom-select .select-styled span img {
   filter: invert(1);
   opacity: 0.7;
+}
+.dark .builder-ui .custom-select .select-options {
+  background: #2C2C2EB0;
 }
 .dark .builder-ui .custom-select .select-options li {
   color: #fff;
@@ -2434,6 +2438,10 @@ body.frame-center.controlpanel .is-content-view {
 
 .dark #divStyles > div .is-overlay:after {
   background: rgba(78, 78, 78, 0.09);
+}
+
+.dark .builder-ui .is-controlpanel .panelnav h3 {
+  color: white
 }
 
 #divStyles > div.active img {

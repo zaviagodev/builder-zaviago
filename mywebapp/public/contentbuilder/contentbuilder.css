@@ -2084,12 +2084,10 @@ button:focus-visible {
   left: 0;
   display: none;
   z-index: 10004;
-  background: rgba(0, 0, 0, 0.04);
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: sans-serif;
-  font-weight: 300;
+  font-family: 'Inter', sans-serif;
   outline: none;
 }
 #_cbhtml .is-modal a:focus,
@@ -2188,7 +2186,7 @@ button:focus-visible {
 .is-ui .is-modal.is-modal-content,
 .is-ui .is-modal .is-modal-content {
   background: rgba(248, 247, 247, 0.67);
-  backdrop-filter:blur(20px);
+  backdrop-filter: blur(20px);
   box-shadow: 6px 14px 20px 0px rgba(95, 95, 95, 0.08);
   border-radius: 17px;
   overflow: hidden;
@@ -2197,20 +2195,18 @@ button:focus-visible {
 .is-ui .is-modal .is-modal-content {
   position: relative;
   width: 100%;
-  padding: 25px 25px;
+  padding: 25px;
   box-sizing: border-box;
   border-radius: 8px;
 }
 #_cbhtml .is-modal:not(.is-modal-content) > div:not(.is-modal-overlay),
 .is-ui .is-modal:not(.is-modal-content) > div:not(.is-modal-overlay) {
-  background: #fff;
-  border: 1px solid #e3e3e3;
   box-shadow: 6px 14px 20px 0px rgba(95, 95, 95, 0.08);
   position: relative;
   width: 100%;
-  padding: 25px 25px;
+  padding: 25px;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 13px;
   overflow: hidden;
 }
 #_cbhtml .is-modal.is-modal-full > div:not(.is-modal-overlay),
@@ -2247,7 +2243,7 @@ button:focus-visible {
   font-family: sans-serif;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #545454;
+  color: black;
   touch-action: none;
   user-select: none;
   z-index: 1;
@@ -2548,11 +2544,20 @@ button:focus-visible {
   flex-direction: row;
   align-items: flex-start;
 }
+
+#_cbhtml .is-modal.page-timeline .is-modal-bar,
+.is-ui .is-modal.page-timeline .is-modal-bar,
+#_cbhtml .is-modal.animatescroll .is-modal-bar,
+.is-ui .is-modal.animatescroll .is-modal-bar,
 #_cbhtml .is-modal.edittable .is-modal-bar,
-.is-ui .is-modal.edittable .is-modal-bar {
-  line-height: 30px;
-  height: 30px;
-  background-color: #fafafa;
+.is-ui .is-modal.edittable .is-modal-bar,
+#_cbhtml .is-modal.buttoneditor .is-modal-bar,
+.is-ui .is-modal.buttoneditor .is-modal-bar {
+  height: 70px;
+  font-weight:700;
+  font-size:30px !important;
+  display:flex;
+  padding:20px;
 }
 #_cbhtml .is-modal.edittable .is-modal-bar .is-modal-close,
 .is-ui .is-modal.edittable .is-modal-bar .is-modal-close {
@@ -2565,11 +2570,20 @@ button:focus-visible {
 .is-ui .is-modal.edittable.active {
   display: flex;
 }
+
+#_cbhtml .is-modal.page-timeline > div:not(.is-draggable),
+.is-ui .is-modal.page-timeline > div:not(.is-draggable),
+#_cbhtml .is-modal.animatescroll > div:not(.is-draggable),
+.is-ui .is-modal.animatescroll > div:not(.is-draggable),
 #_cbhtml .is-modal.edittable > div:not(.is-draggable),
-.is-ui .is-modal.edittable > div:not(.is-draggable) {
+.is-ui .is-modal.edittable > div:not(.is-draggable),
+#_cbhtml .is-modal.buttoneditor > div:not(.is-draggable),
+.is-ui .is-modal.buttoneditor > div:not(.is-draggable) {
   width: 100%;
-  margin-top: 30px;
+  padding-top: 70px !important;
+  border-radius:13px;
 }
+
 #_cbhtml .is-modal.edittable .is-modal-overlay,
 .is-ui .is-modal.edittable .is-modal-overlay {
   display: none !important;
@@ -2810,9 +2824,9 @@ button:focus-visible {
 .is-ui .is-modal.buttoneditor {
   z-index: 10002;
   position: fixed;
-  overflow: hidden;
+  overflow: visible;
   width: 575px;
-  height: 648px;
+  height: 700px;
   top: 50%;
   left: auto;
   right: 30%;
@@ -2825,12 +2839,6 @@ button:focus-visible {
 .is-ui .is-modal.buttoneditor .is-modal-overlay {
   display: none !important;
 }
-#_cbhtml .is-modal.buttoneditor .is-modal-bar,
-.is-ui .is-modal.buttoneditor .is-modal-bar {
-  line-height: 30px;
-  height: 30px;
-  background-color: #fafafa;
-}
 #_cbhtml .is-modal.buttoneditor .is-modal-bar .is-modal-close,
 .is-ui .is-modal.buttoneditor .is-modal-bar .is-modal-close {
   width: 20px;
@@ -2841,11 +2849,6 @@ button:focus-visible {
 #_cbhtml .is-modal.buttoneditor.active,
 .is-ui .is-modal.buttoneditor.active {
   display: flex;
-}
-#_cbhtml .is-modal.buttoneditor > div:not(.is-draggable),
-.is-ui .is-modal.buttoneditor > div:not(.is-draggable) {
-  width: 100%;
-  margin-top: 30px;
 }
 #_cbhtml .is-modal.buttoneditor button,
 .is-ui .is-modal.buttoneditor button {
@@ -2882,7 +2885,6 @@ button:focus-visible {
 #_cbhtml .is-modal.buttoneditor #divMyButtons, #_cbhtml .is-modal.buttoneditor #divButtonTemplates,
 .is-ui .is-modal.buttoneditor #divMyButtons,
 .is-ui .is-modal.buttoneditor #divButtonTemplates {
-  background-color: #ebebeb;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2902,7 +2904,6 @@ button:focus-visible {
   border-top: transparent 70px solid;
   box-sizing: border-box;
   overflow: hidden;
-  overflow-y: auto;
   overflow-y: auto;
 }
 #_cbhtml .is-modal.buttoneditor #divMyButtonList a,
@@ -2940,6 +2941,9 @@ button:focus-visible {
   position: relative;
   margin: 15px 28px 13px 0;
   outline-offset: 2px;
+  width: fit-content;
+  align-items: center;
+  display:inline-flex;
 }
 #_cbhtml .is-modal.columnsettings .is-modal-bar, #_cbhtml .is-modal.rowsettings .is-modal-bar,
 .is-ui .is-modal.columnsettings .is-modal-bar,
@@ -3873,8 +3877,8 @@ button:focus-visible {
   display: inline-block;
   border: none;
   border-bottom: none;
-  border-radius: 1px;
-  background-color: #f6f6f6;
+  border-radius: 10px;
+  background-color: white;
 }
 #_cbhtml input[type=text]:focus,
 .is-ui input[type=text]:focus {
@@ -4086,6 +4090,7 @@ button:focus-visible {
   background: #fafafa;
   display: flex;
   flex-flow: wrap;
+  border-radius:9px;
 }
 #_cbhtml .is-tabs a,
 .is-ui .is-tabs a {
@@ -4096,12 +4101,14 @@ button:focus-visible {
   text-decoration: none;
   transition: box-shadow ease 0.3s;
   outline: none;
+  margin:2px;
 }
 #_cbhtml .is-tabs a.active,
 .is-ui .is-tabs a.active {
-  background: transparent;
+  background: rgb(237, 237, 237);
   box-shadow: none;
   cursor: default;
+  border-radius:9px;
 }
 #_cbhtml .is-tabs a:focus,
 .is-ui .is-tabs a:focus {
@@ -4113,6 +4120,10 @@ button:focus-visible {
   display: none;
   padding: 20px;
   flex-direction: column;
+}
+#_cbhtml .is-tab-content.active,
+.is-ui .is-tab-content.active {
+  margin-top:50px;
 }
 #_cbhtml .is-tab-content[tabindex="-1"]:focus,
 .is-ui .is-tab-content[tabindex="-1"]:focus {
@@ -6337,11 +6348,22 @@ div[data-html] {
   filter: invert(1);
 }
 
-.dark #_cbhtml .is-modal.is-modal-content, 
-.dark #_cbhtml .is-modal .is-modal-content, 
-.dark .is-ui .is-modal.is-modal-content, 
+.dark #_cbhtml .is-modal.is-modal-content,
+.dark #_cbhtml .is-modal .is-modal-content,
+.dark .is-ui .is-modal.is-modal-content,
 .dark .is-ui .is-modal .is-modal-content {
-  background: rgba(26, 26, 28, 0.67)
+  background:rgba(26, 26, 28, 0.67) !important
+}
+
+.dark #_cbhtml .is-modal.page-timeline .is-modal-bar,
+.dark .is-ui .is-modal.page-timeline .is-modal-bar,
+.dark #_cbhtml .is-modal.animatescroll .is-modal-bar,
+.dark .is-ui .is-modal.animatescroll .is-modal-bar,
+.dark #_cbhtml .is-modal.edittable .is-modal-bar,
+.dark .is-ui .is-modal.edittable .is-modal-bar,
+.dark #_cbhtml .is-modal.buttoneditor .is-modal-bar,
+.dark .is-ui .is-modal.buttoneditor .is-modal-bar {
+  color:#fff
 }
 
 i.bi, i.icon {
@@ -6376,3 +6398,7 @@ i.bi, i.icon {
     display: flex;
 }
 */
+
+.is-modal.page-timeline {
+  height: 340px !important;
+}
