@@ -137,7 +137,7 @@ function Assets(props) {
 
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
             <div className='flex justify-center items-start'>
-            <Tab.List className="flex relative z-10 justify-center p-1 space-x-3 bg-gray-100/75 w-50 rounded-lg">
+            <Tab.List className="flex relative z-10 justify-center p-1 space-x-3 bg-white dark:bg-[#7676803D] w-50 rounded-lg">
                 <Tab as={Fragment}>
                 {({ selected }) => (
                     <button className={selected ? stylesDashboard.tabactive : stylesDashboard.tab}>
