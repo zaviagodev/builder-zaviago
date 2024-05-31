@@ -2745,14 +2745,15 @@ select:focus-visible {
   box-shadow: none;
 }
 
-input[type=text], input[type=email] {
+input[type=text], input[type=email], input[type=password] {
   border: none;
+  background:rgba(228, 227, 227, 0.67);
   padding: 0.5rem 12px;
   height: 45px;
   border-radius:13px;
 }
 
-input[type=text]:focus, input[type=email]:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
   box-shadow: none;
   border-color: transparent;
 }
@@ -3470,5 +3471,6 @@ div#headlessui-dialog-overlay-\:r3\: {
   display: none;
 }
 button.button-primary.w-full {
-  background: rgb(67 56 202 / var(--tw-bg-opacity));
+  background: #2C2C2E;
+  border-radius:13px;
 }
