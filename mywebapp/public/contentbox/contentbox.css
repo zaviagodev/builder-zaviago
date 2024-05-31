@@ -2960,10 +2960,11 @@ body.fullview.topspace .is-content-view iframe {
 }
 
 #_cbhtml .anim-controls {
-  border-top: transparent 248px solid !important
+  border-top: transparent 268px solid !important
 }
 
-#_cbhtml .anim-controls .flex-wrap {
+#_cbhtml .anim-controls .flex-wrap,
+#_cbhtml .anim-controls .flex-nowrap {
   gap:4px;
   background:white;
   border-radius:7px;
@@ -2972,17 +2973,37 @@ body.fullview.topspace .is-content-view iframe {
 }
 
 #_cbhtml .div-anim-apply-to .flex-wrap button,
-#_cbhtml .anim-controls .flex-wrap button {
+#_cbhtml .anim-controls .flex-wrap button,
+#_cbhtml .div-anim-apply-to .flex-nowrap button,
+#_cbhtml .anim-controls .flex-nowrap button {
   box-shadow:none !important;
 }
 
-#_cbhtml .div-anim-apply-to .flex-wrap {
+#_cbhtml .div-anim-apply-to .flex-wrap,
+#_cbhtml .div-anim-apply-to .flex-nowrap {
   height:inherit !important;
   gap:4px;
   background:white;
   border-radius:7px;
   padding:2px;
-  width:fit-content
+  width:fit-content;
+  flex-wrap:wrap;
+}
+
+.dark #_cbhtml .div-anim-apply-to .flex-wrap,
+.dark #_cbhtml .anim-controls .flex-wrap,
+.dark #_cbhtml .div-anim-apply-to .flex-nowrap,
+.dark #_cbhtml .anim-controls .flex-nowrap {
+  background: #7676803D;
+}
+
+.dark #_cbhtml .cmd-target,
+.dark #_cbhtml .cmd-slidex,
+.dark #_cbhtml .cmd-rotate,
+.dark #_cbhtml .cmd-scale,
+.dark #_cbhtml .cmd-basic-anim,
+.dark #_cbhtml .cmd-basic-delay {
+  background: transparent !important
 }
 
 #editPanel .is-content-view {

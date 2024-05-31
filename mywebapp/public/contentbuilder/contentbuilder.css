@@ -6458,6 +6458,11 @@ i.bi, i.icon {
   background: #EBEBF599 !important;
 }
 
+.dark #_cbhtml .is-modal button.on, 
+.dark .is-ui .is-modal button.on {
+  background: #636366 !important;
+}
+
 /* block tool */
 /*
 .is-block-tool {
