@@ -4198,7 +4198,16 @@ button:focus-visible {
   box-shadow: none !important;
   margin: 16px;
   width: calc(100% - 32px);
+  margin-top:100px;
 }
+#_cbhtml .inp-snippets.custom-select::before,
+.is-ui .inp-snippets.custom-select::before {
+  content:'Categories';
+  position:absolute;
+  top:-26px;
+  font-size:14px;
+}
+
 #_cbhtml .inp-snippets.custom-select .select-styled,
 .is-ui .inp-snippets.custom-select .select-styled {
   border: none;
@@ -4297,7 +4306,7 @@ button:focus-visible {
   overflow-y: auto;
   overflow-x: hidden;
   text-align: center;
-  border-top: transparent 80px solid !important;
+  border-top: transparent 100px solid !important;
   outline: none;
   border-radius:17px;
   display:grid;
