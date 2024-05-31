@@ -1020,28 +1020,26 @@ body.controlpanel .is-content-view.mobile {
 /* CONTROL PANEL */
 body.controlpanel .builder-ui .is-controlpanel {
   right: 8px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 0 16px 0px;
 }
 body.controlpanel .is-wrapper {
   margin-left: 0 !important;
 }
 
 .builder-ui .is-controlpanel {
-  /* background-color: rgba(248, 247, 247, 0.67); */
   position: fixed;
-  width: 380px;
+  width: calc(380px + 4px);
   height: 100vh;
   display: flex;
   top: 0;
   right: -380px;
   z-index: 1;
   display: flex;
-  overflow-y: auto;
+  overflow-y: scroll;
   flex-direction: column;
   transition: all 0.3s ease;
   box-shadow: none;
   border-radius:17px;
-  scrollbar-width: none;
+  padding-right:4px;
 }
 
 .builder-ui .is-controlpanel::before {
@@ -1050,7 +1048,7 @@ body.controlpanel .is-wrapper {
   backdrop-filter: blur(20px);
   z-index:-1;
   position: fixed;
-  width: 380px;
+  width: calc(380px - 8px);
   height: calc(100% - 79px);
   border-radius:17px;
   overflow:hidden
@@ -1060,7 +1058,7 @@ body.controlpanel .is-wrapper {
   position: absolute;
   top: 3px;
   left: 3px;
-  right: 3px;
+  right: 7px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2026,19 +2024,6 @@ body.frame-center.controlpanel .is-content-view {
   filter: invert(1);
   opacity: 0.7;
 }
-.dark .scroll-darker * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) auto;
-}
-.dark .scroll-darker *::-webkit-scrollbar {
-  width: 12px;
-}
-.dark .scroll-darker *::-webkit-scrollbar-track {
-  background: rgba(200, 200, 200, 0.2);
-}
-.dark .scroll-darker *::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 .dark .custom-select .select-options li:hover,
 .dark .custom-select .select-options li.selected {
   background-color: #484848;
@@ -3002,4 +2987,13 @@ body.fullview.topspace .is-content-view iframe {
 
 #editPanel .is-content-view {
   background: transparent !important;
+}
+
+#divSidebarSnippets::before {
+  content: 'Widgets';
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:-0.2px;
+  padding:15px 0 0 20px;
+  display:block;
 }

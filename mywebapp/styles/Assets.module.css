@@ -36,6 +36,10 @@
     position: relative;
 }
 
+.dark .file {
+    color:#fff
+}
+
 .fileactive {
     @apply outline-2 outline-indigo-500 outline 
 }
