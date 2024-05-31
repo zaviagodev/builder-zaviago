@@ -393,14 +393,16 @@ function Page(props) {
                 
             </Menu>
 
-            <h2>{props.slug?'/'+props.slug:'/...home'}</h2>
-            <p>{props.title?limit(props.title, 60):''}</p>
+            <div className='flex flex-col gap-y-2 w-full'>
+                <h2 className='flex items-center gap-4'>{props.slug?'/'+props.slug:'/...home'}
+                    {props.online?<div className={styles.onlineinfo}>
+                    Published
+                    </div>:null} 
+                </h2>
+                <p className='text-[#929292]'>{props.title?limit(props.title, 60):''}</p>
+            </div>
 
             <div className='w-full flex justify-end'>
-                
-                {props.online?<div className={styles.onlineinfo}>
-                -online-
-                </div>:null} 
 
                 {props.online?
                     props.mainHost && session.user.name!=='admin'?

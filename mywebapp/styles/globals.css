@@ -1245,7 +1245,7 @@ video {
 }
 
 .dark {
-  --bg-color: #1A1A1CE0; /* Original: #181818 */
+  --bg-color: #262523; /* Original: #181818 */
   --modal-bg-color: #1A1A1CE0; /* Original: #252525 */
   --modal-border-color: #363636;
   --text-color: #CBCBCB;
@@ -1259,6 +1259,8 @@ video {
 
 body {
   font-weight: 300;
+  background:var(--bg-color);
+  color: var(---text-color)
 }
 
 /*  CONTENT & TOOLS */
