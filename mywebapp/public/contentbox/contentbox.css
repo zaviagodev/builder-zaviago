@@ -1971,7 +1971,7 @@ body.frame-center.controlpanel .is-content-view {
 }
 .dark .builder-ui input[type=text], .dark .builder-ui textarea {
   color: #c7c7c7;
-  background-color: #313131;
+  background-color: #7676803D;
 }
 .dark .builder-ui input[type=checkbox] {
   opacity: 0.7;
