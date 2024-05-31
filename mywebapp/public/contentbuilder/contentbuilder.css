@@ -2103,7 +2103,7 @@ button:focus-visible {
 .is-ui .is-modal button {
   color: #000;
   background: #fff;
-  border-radius:7px;
+  border-radius:8px;
 }
 #_cbhtml .is-modal button:hover,
 .is-ui .is-modal button:hover {

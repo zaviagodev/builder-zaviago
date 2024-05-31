@@ -6,6 +6,23 @@
   font-family:'Inter', sans-serif
 }
 
+*::-webkit-scrollbar {
+  width:8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #2C2C2EB0;
+  border-radius:9999px;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background: #F8F7F7B0;
+}
+
 @layer base {
   [type='text'],
   [type='email'],
@@ -42,7 +59,7 @@
 
 @layer components {
   .button-normal {
-    @apply px-4 py-2 transform transition font-normal shadow-sm text-sm rounded bg-brand hover:bg-brand-light text-gray-800
+    @apply px-4 py-2 transform transition font-normal text-sm rounded-md bg-white text-gray-800
     flex justify-center items-center border border-transparent focus:outline-none 
     focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
   }
@@ -1228,15 +1245,15 @@ video {
 }
 
 .dark {
-  --bg-color: #181818;
-  --modal-bg-color: #252525;
+  --bg-color: #1A1A1CE0; /* Original: #181818 */
+  --modal-bg-color: #1A1A1CE0; /* Original: #252525 */
   --modal-border-color: #363636;
   --text-color: #CBCBCB;
-  --input-bg-color: #2B2B2B;
+  --input-bg-color: #7676803D; /* Original: #2B2B2B */
   --input-text-color: #DDD;
   --input-border-color: #585858;
-  --button-bg-color: #585858;
-  background-color: #1E1E1E;
+  --button-bg-color: #7676803D; /* Original: #585858 */
+  /*background-color: #1A1A1CE0;  Original: #1E1E1E */
   color: var(--text-color);
 }
 
@@ -2823,23 +2840,6 @@ button:focus-visible {
 
 .dark .is-progress-bar::-webkit-progress-bar {
   background-color: var(--input-bg-color);
-}
-
-.dark * {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) auto;
-}
-
-.dark *::-webkit-scrollbar {
-  width: 12px;
-}
-
-.dark *::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.dark *::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .tooltip {
