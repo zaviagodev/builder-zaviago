@@ -6,6 +6,10 @@
   font-family:'Inter', sans-serif
 }
 
+.bg-front-gradient {
+  background:linear-gradient(50deg,#fff 78.99%,#d1b5ff 271.14%)
+}
+
 *::-webkit-scrollbar {
   width:8px;
 }

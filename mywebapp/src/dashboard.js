@@ -32,17 +32,18 @@ function Dashboard(props) {
     return <>
         <div className={styles.dashboard}>
 
-            <div className='px-12 py-12'>
+            <div className='flex flex-col items-start min-w-[256px] p-4 gap-2 border-r border-r-[#F4F4F4] h-screen'>
+                <AddPage onAdd={getPages} />
+                <AssetButton fileType={'all'}/>
+                <Site mainHost={props.mainHost} owner={props.owner} />
+                <Account />
+                <button className='button-normal w-full justify-start hover:bg-gray-100' onClick={logoutHandler}>Logout</button>
+            </div>
 
-                <h1>Pages</h1>
+            <div className='p-12 w-full bg-front-gradient'>
 
-                <div className='flex my-9'>
-                    <AddPage onAdd={getPages} />
-                    <AssetButton fileType={'all'}/>
-                    <Site mainHost={props.mainHost} owner={props.owner} />
-                    <Account />
-                    <button className='button-normal' onClick={logoutHandler}>Logout</button>
-                </div>
+                <h1>Dashboard</h1>
+
 
                 <div className="flex flex-wrap">
                     {loadedData?loadedData.pages.map(page=>{
