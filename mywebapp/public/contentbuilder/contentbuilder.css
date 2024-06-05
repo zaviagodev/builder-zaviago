@@ -6458,6 +6458,149 @@ i.bi, i.icon {
   background: #EBEBF599 !important;
 }
 
+#_cbhtml .pickgradientcolor, .is-ui .pickgradientcolor {
+  width: 380px;
+  flex-direction: column;
+  padding:10px 10px 11px;
+  box-sizing: border-box;
+  height:fit-content;
+}
+
+#_cbhtml .pickgradientcolor .div-presets .btn-graditem, .is-ui .pickgradientcolor .div-presets .btn-graditem {
+  width: 82px;
+  height: 82px;
+  border-radius: 13px;
+}
+
+#_cbhtml .pickgradientcolor .div-presets, .is-ui .pickgradientcolor .div-presets {
+  display:flex;
+  flex-flow:wrap;
+  gap:10px;
+}
+
+#_cbhtml .pickgradientcolor .label-gradient-colors, .is-ui .pickgradientcolor .label-gradient-colors {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#_cbhtml .pickgradientcolor .div-add, .is-ui .pickgradientcolor .div-add {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#_cbhtml .pickgradientcolor .div-sort, .is-ui .pickgradientcolor .div-sort {
+  display: flex;
+  gap: 28px;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+#_cbhtml .pickgradientcolor .div-add .btn-clear, .is-ui .pickgradientcolor .div-add .btn-clear,
+#_cbhtml .pickgradientcolor .div-add .btn-addstop, .is-ui .pickgradientcolor .div-add .btn-addstop,
+#_cbhtml .pickgradientcolor .div-sort div .btn-colorstop, .is-ui .pickgradientcolor .div-sort div .btn-colorstop {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+}
+
+#_cbhtml .gradient-slider-container, .is-ui .gradient-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 15px;
+  margin: 20px 0 15px -2px;
+  width: calc(100% - 28px);
+}
+
+#_cbhtml .gradient-slider-container .gradient-slider-container-shadow, .is-ui .gradient-slider-container .gradient-slider-container-shadow {
+  position: absolute;
+  background-color: #ddd;
+  width: 100%;
+  height: 100%;
+  left: 12px;
+  border-radius: 4px;
+}
+
+#_cbhtml .gradient-slider-container .slider-point, .is-ui .gradient-slider-container .slider-point {
+  position: absolute;
+  top: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  border: #ffffff 3px solid;
+}
+
+#_cbhtml .pickgradientcolor .label-saved, .is-ui .pickgradientcolor .label-saved {
+  margin-top:20px;
+}
+
+#_cbhtml .pickgradientcolor .div-saved, .is-ui .pickgradientcolor .div-saved {
+  display: flex;
+  flex-flow: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#_cbhtml .pickgradientcolor .div-saved div, .is-ui .pickgradientcolor .div-saved div {
+  width: 82px;
+  height: 82px;
+  position: relative;
+}
+
+#_cbhtml .pickgradientcolor .div-save, .is-ui .pickgradientcolor .div-save {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#_cbhtml .pickgradientcolor .div-sort div .btn-remove, .is-ui .pickgradientcolor .div-sort div .btn-remove {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #fff;
+  border-radius: 50%;
+  border: rgba(0, 0, 0, 0.6705882353) 1px solid;
+}
+
+#_cbhtml .roundslider-container, .is-ui .roundslider-container {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  flex: none;
+}
+
+#_cbhtml .roundslider-container .roundslider, .is-ui .roundslider-container .roundslider {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#_cbhtml .pickgradientcolor .div-sort div, .is-ui .pickgradientcolor .div-sort div {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+#_cbhtml .roundslider-container .knob, .is-ui .roundslider-container .knob {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #007bff;
+  position: absolute;
+  cursor: pointer;
+}
+
 /* block tool */
 /*
 .is-block-tool {
