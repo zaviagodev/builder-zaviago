@@ -321,78 +321,6 @@ function Page(props) {
 
     return <>
         <div className={styles.card}>
-
-            <Menu as="div" className={styles.more}>
-                
-                <Menu.Button>
-                    {showSvgIcon('more', 25, 25)}
-                </Menu.Button>
-                
-                <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95">
-
-                    <Menu.Items className={`${styles.moremenu} focus:outline-none`}>
-                        
-                        <Menu.Item>
-                            {({ active }) => (
-                                <button className={`${active ? styles.active : ""}`} title={'Publish'} onClick={publishHandler}>Publish Draft</button>
-                            )}
-                        </Menu.Item>
-                        
-                        {
-                        props.online?
-                        <Menu.Item>
-                            {({ active }) => (
-                                <button className={`${active ? styles.active : ""}`}  title={'Unpublish'} onClick={unPublishHandler}>Unpublish</button>
-                            )}
-                        </Menu.Item>:null
-                        }
-
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a className={`${active ? styles.active : ""}`}  title={'View Draft'} target="_blank" href={`/draft?page=${props.slug}`}>View Draft</a>
-                            )}
-                        </Menu.Item>
-
-                        <div className={styles.menuseparator}></div>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <button className={`${active ? styles.active : ""}`}  title={'Settings'} onClick={settingsHandler}>Settings</button>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <button className={`${active ? styles.active : ""}`}  title={'Includes'} onClick={includesHandler}>Includes</button>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                                <a className={`${active ? styles.active : ""}`}  title={'HTML'} target="_blank" href={`/code?page=${props.slug}`}>HTML</a>
-                            )}
-                        </Menu.Item>
-                    
-                        {props.slug?
-                        <>
-                            <div className={styles.menuseparator}></div>
-                            <Menu.Item>
-                                {({ active }) => (
-                                    <button className={` ${active ? styles.active : ""}`}  title={'Delete'} onClick={deleteConfirmHandler}>Delete</button>
-                                )}
-                            </Menu.Item>
-                            
-                        </>:null}   
-                    </Menu.Items>
-
-                </Transition>
-                
-            </Menu>
-
             <div className='flex flex-col gap-y-2 w-full'>
                 <h2 className='flex items-center gap-4'>{props.slug?'/'+props.slug:'/...home'}
                     {props.online?<div className={styles.onlineinfo}>
@@ -402,7 +330,7 @@ function Page(props) {
                 <p className='text-[#929292]'>{props.title?limit(props.title, 60):''}</p>
             </div>
 
-            <div className='w-full flex justify-end'>
+            <div className='w-full flex justify-end items-center'>
 
                 {props.online?
                     props.mainHost && session.user.name!=='admin'?
@@ -419,6 +347,76 @@ function Page(props) {
 
                 <a className={styles.cardbutton + ' ml-2'} href={'/edit?page='+props.slug} target="_blank">Edit</a>
 
+                <Menu as="div" className={styles.more + ' ml-2'}>
+                    
+                    <Menu.Button>
+                        {showSvgIcon('more', 25, 25)}
+                    </Menu.Button>
+                    
+                    <Transition
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95">
+
+                        <Menu.Items className={`${styles.moremenu} focus:outline-none`}>
+                            
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <button className={`${active ? styles.active : ""}`} title={'Publish'} onClick={publishHandler}>Publish Draft</button>
+                                )}
+                            </Menu.Item>
+                            
+                            {
+                            props.online?
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <button className={`${active ? styles.active : ""}`}  title={'Unpublish'} onClick={unPublishHandler}>Unpublish</button>
+                                )}
+                            </Menu.Item>:null
+                            }
+
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <a className={`${active ? styles.active : ""}`}  title={'View Draft'} target="_blank" href={`/draft?page=${props.slug}`}>View Draft</a>
+                                )}
+                            </Menu.Item>
+
+                            <div className={styles.menuseparator}></div>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <button className={`${active ? styles.active : ""}`}  title={'Settings'} onClick={settingsHandler}>Settings</button>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <button className={`${active ? styles.active : ""}`}  title={'Includes'} onClick={includesHandler}>Includes</button>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                                {({ active }) => (
+                                    <a className={`${active ? styles.active : ""}`}  title={'HTML'} target="_blank" href={`/code?page=${props.slug}`}>HTML</a>
+                                )}
+                            </Menu.Item>
+                        
+                            {props.slug?
+                            <>
+                                <div className={styles.menuseparator}></div>
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button className={` ${active ? styles.active : ""}`}  title={'Delete'} onClick={deleteConfirmHandler}>Delete</button>
+                                    )}
+                                </Menu.Item>
+                                
+                            </>:null}   
+                        </Menu.Items>
+
+                    </Transition>
+                    
+                </Menu>
             </div>
         </div>
 

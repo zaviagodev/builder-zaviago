@@ -60,17 +60,13 @@
     no-underline flex justify-center items-center
 }
 
-.more {
-    @apply absolute right-0 top-2 bg-transparent p-0 w-8 p-0
-}
-
 .more button {
     @apply bg-transparent hover:bg-transparent text-gray-800 p-0 focus:outline-none shadow-none
     focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 rounded-sm
 }
 
 .moremenu {
-    @apply z-10 top-7 right-2 absolute w-40 bg-white rounded shadow-[5px_5px_0px_rgba(239,241,248,1)] p-3 flex flex-col tracking-wide border border-solid border-gray-400/75
+    @apply z-10 top-24 right-2 absolute w-40 bg-white rounded shadow-[5px_5px_0px_rgba(239,241,248,1)] p-3 flex flex-col tracking-wide border border-solid border-gray-400/75
 }
 
 .moremenu button,
