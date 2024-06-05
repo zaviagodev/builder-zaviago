@@ -6460,6 +6460,7 @@ i.bi, i.icon {
   background: #EBEBF599 !important;
 }
 
+
 #_cbhtml .pickgradientcolor, .is-ui .pickgradientcolor {
   width: 380px;
   flex-direction: column;
@@ -6607,6 +6608,11 @@ i.bi, i.icon {
   background-color: #007bff;
   position: absolute;
   cursor: pointer;
+}
+
+.dark #_cbhtml .is-modal button.on, 
+.dark .is-ui .is-modal button.on {
+  background: #636366 !important;
 }
 
 /* block tool */
