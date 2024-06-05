@@ -6387,7 +6387,9 @@ div[data-html] {
 .dark #_cbhtml .is-modal.is-modal-content,
 .dark #_cbhtml .is-modal .is-modal-content,
 .dark .is-ui .is-modal.is-modal-content,
-.dark .is-ui .is-modal .is-modal-content {
+.dark .is-ui .is-modal .is-modal-content,
+.dark #_cbhtml .is-pop, 
+.dark .is-ui .is-pop {
   background:#1A1A1CE0 !important
 }
 
@@ -6466,7 +6468,7 @@ i.bi, i.icon {
   height:fit-content;
 }
 
-#_cbhtml .pickgradientcolor .div-presets .btn-graditem, .is-ui .pickgradientcolor .div-presets .btn-graditem {
+#_cbhtml .pickgradientcolor .btn-graditem, .is-ui .pickgradientcolor .btn-graditem {
   width: 82px;
   height: 82px;
   border-radius: 13px;
@@ -6526,7 +6528,7 @@ i.bi, i.icon {
 
 #_cbhtml .gradient-slider-container .slider-point, .is-ui .gradient-slider-container .slider-point {
   position: absolute;
-  top: -8px;
+  top: -4px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -6557,7 +6559,13 @@ i.bi, i.icon {
   margin-top: 20px;
 }
 
-#_cbhtml .pickgradientcolor .div-sort div .btn-remove, .is-ui .pickgradientcolor .div-sort div .btn-remove {
+#_cbhtml .pickgradientcolor .div-save .btn-save, .is-ui .pickgradientcolor .div-save .btn-save {
+  width: 100%;
+  height: 44px;
+  border-radius: 13px;
+}
+
+#_cbhtml .pickgradientcolor .btn-remove, .is-ui .pickgradientcolor .btn-remove {
   width: 19px;
   height: 19px;
   position: absolute;
