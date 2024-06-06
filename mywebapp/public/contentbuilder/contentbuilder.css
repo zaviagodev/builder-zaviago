@@ -2269,6 +2269,9 @@ button:focus-visible {
   cursor: pointer;
   box-shadow: none;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .is-modal-close .is-icon-flex {
@@ -2560,14 +2563,24 @@ button:focus-visible {
 #_cbhtml .is-modal.edittable .is-modal-bar,
 .is-ui .is-modal.edittable .is-modal-bar,
 #_cbhtml .is-modal.buttoneditor .is-modal-bar,
-.is-ui .is-modal.buttoneditor .is-modal-bar {
-  height: 70px;
+.is-ui .is-modal.buttoneditor .is-modal-bar,
+#_cbhtml .is-modal.wordcount .is-modal-bar,
+.is-ui .is-modal.wordcount .is-modal-bar {
+  height: 70px !important;
   font-weight:700;
   font-size:30px !important;
   display:flex;
   padding:20px;
   letter-spacing:-0.2px;
+  font-family:'Inter', sans-serif
 }
+
+#_cbhtml .is-modal.wordcount .is-modal-bar,
+.is-ui .is-modal.wordcount .is-modal-bar {
+  position:relative;
+  margin-bottom:-50px;
+}
+
 #_cbhtml .is-modal.edittable .is-modal-bar .is-modal-close,
 .is-ui .is-modal.edittable .is-modal-bar .is-modal-close {
   width: 40px;
@@ -6394,14 +6407,8 @@ div[data-html] {
   background:#1A1A1CE0 !important
 }
 
-.dark #_cbhtml .is-modal.page-timeline .is-modal-bar,
-.dark .is-ui .is-modal.page-timeline .is-modal-bar,
-.dark #_cbhtml .is-modal.animatescroll .is-modal-bar,
-.dark .is-ui .is-modal.animatescroll .is-modal-bar,
-.dark #_cbhtml .is-modal.edittable .is-modal-bar,
-.dark .is-ui .is-modal.edittable .is-modal-bar,
-.dark #_cbhtml .is-modal.buttoneditor .is-modal-bar,
-.dark .is-ui .is-modal.buttoneditor .is-modal-bar {
+.dark #_cbhtml .is-modal div.is-modal-bar, 
+.dark .is-ui .is-modal div.is-modal-bar {
   color:#fff
 }
 

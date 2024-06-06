@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Fragment } from 'react';
 import { signOut } from 'next-auth/react';
 import Site from './site';
 import Account from './account';
@@ -6,6 +6,7 @@ import Page from './page';
 import AssetButton from './assetbutton';
 import AddPage from './addpage';
 import styles from '../styles/Dashboard.module.css';
+import { Dialog, Menu, Transition } from '@headlessui/react';
 
 function Dashboard(props) {
 
@@ -57,7 +58,31 @@ function Dashboard(props) {
                     <button className='p-0 bg-white lg:hidden' onClick={() => setIsSidebarOpen(true)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-right"><path d="m6 17 5-5-5-5"/><path d="m13 17 5-5-5-5"/></svg>
                     </button>
-                    <button className='p-0 bg-white' onClick={logoutHandler}>Logout</button>
+                    <Menu as="div" className={styles.more + ' ml-2'}>
+                        <Menu.Button>
+                            MENU
+                        </Menu.Button>
+                        
+                        <Transition
+                            as={Fragment}
+                            enter="transition ease-out duration-100"
+                            enterFrom="transform opacity-0 scale-95"
+                            enterTo="transform opacity-100 scale-100"
+                            leave="transition ease-in duration-75"
+                            leaveFrom="transform opacity-100 scale-100"
+                            leaveTo="transform opacity-0 scale-95">
+
+                            <Menu.Items className={`${styles.moremenu} focus:outline-none !top-12`}>
+                                <Menu.Item>
+                                    {({ active }) => (
+                                        <button className={`${active ? styles.active : ""}`} title={'Logout'} onClick={logoutHandler}>Logout</button>
+                                    )}
+                                </Menu.Item>
+                            </Menu.Items>
+
+                        </Transition>
+                        
+                    </Menu>
                 </div>
             </div>
 
