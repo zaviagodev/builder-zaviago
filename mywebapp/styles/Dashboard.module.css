@@ -71,8 +71,7 @@
 .moremenu a {
     @apply transform transition font-normal text-[0.9rem]
     flex justify-start items-center border border-transparent 
-    bg-transparent text-gray-800
-    px-4 py-[0.37rem] 
+    bg-transparent text-gray-800 p-2 gap-2
     no-underline
     focus:outline-none focus:ring-transparent shadow-none rounded
     hover:bg-[#F4F4F4]
