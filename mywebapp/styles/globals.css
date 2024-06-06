@@ -71,18 +71,17 @@
     shadow-none
   }
   .button-primary {
-    @apply px-4 py-3 transform transition tracking-wide font-medium shadow-sm text-sm rounded-md bg-indigo-600 hover:bg-indigo-700 text-white
-    flex justify-center items-center border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+    @apply px-4 py-3 transform transition tracking-wide font-medium shadow-sm text-sm rounded-md text-white
+    flex justify-center items-center border border-transparent focus:outline-none
   }
   .button-secondary {
     @apply px-4 py-2 transform transition font-normal shadow-sm text-sm rounded bg-brand hover:bg-brand-light text-gray-800
-    flex justify-center items-center border border-transparent focus:outline-none 
-    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    flex justify-center items-center border border-transparent focus:outline-none
   }
   .button-wait{
-    @apply px-4 py-3 transform transition tracking-wide font-medium shadow-sm text-sm rounded-md bg-indigo-500 hover:bg-indigo-400 text-white
+    @apply px-4 py-3 transform transition tracking-wide font-medium shadow-sm text-sm rounded-md text-white
     ease-in-out duration-150 cursor-not-allowed
-    flex justify-center items-center border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+    flex justify-center items-center border border-transparent focus:outline-none
   }
   .button-warning {
     @apply px-4 py-3 transform transition tracking-wide font-medium shadow-sm text-sm rounded-md bg-red-600 hover:bg-red-700 text-white
@@ -3475,7 +3474,11 @@ button:focus-visible {
 /* div#headlessui-dialog-overlay-\:r3\: {
   display: none;
 } */
-button.button-primary.w-full {
-  background: #2C2C2E;
+.button-primary, .button-wait {
+  background: rgb(44, 44, 46);
   border-radius:13px;
+}
+
+.button-wait {
+  background:rgba(44, 44, 46, 0.67)
 }
