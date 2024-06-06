@@ -3473,9 +3473,9 @@ button:focus-visible {
   border-color: transparent;
 }
 
-div#headlessui-dialog-overlay-\:r3\: {
+/* div#headlessui-dialog-overlay-\:r3\: {
   display: none;
-}
+} */
 button.button-primary.w-full {
   background: #2C2C2E;
   border-radius:13px;
