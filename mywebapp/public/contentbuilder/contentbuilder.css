@@ -4145,6 +4145,7 @@ button:focus-visible {
 #_cbhtml .is-tab-content:not(#divButtonHover).active,
 .is-ui .is-tab-content:not(#divButtonHover).active {
   margin-top:50px;
+  height:calc(100% - 70px)
 }
 #_cbhtml .is-tab-content[tabindex="-1"]:focus,
 .is-ui .is-tab-content[tabindex="-1"]:focus {
