@@ -36,8 +36,7 @@
 }
 
 .modal2 {
-    @apply z-10 bg-white max-w-[800px] w-full relative rounded 
-    shadow-[6px_5px_0px_0px_rgba(239,241,248,1)] border border-solid border-gray-400
+    @apply z-10 bg-white max-w-[800px] w-full relative rounded-[13px]
     inline-block p-8 md:p-16 my-8 overflow-hidden text-left align-middle transition-all transform 
 }
 
@@ -61,31 +60,30 @@
 }
 
 .more button {
-    @apply bg-transparent hover:bg-transparent text-gray-800 p-0 focus:outline-none shadow-none
-    focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 rounded-sm
+    @apply bg-transparent hover:bg-transparent text-gray-800 p-0 focus:outline-none shadow-none rounded-sm
 }
 
 .moremenu {
-    @apply z-10 top-24 right-2 absolute w-40 bg-white rounded shadow-[5px_5px_0px_rgba(239,241,248,1)] p-3 flex flex-col tracking-wide border border-solid border-gray-400/75
+    @apply z-10 top-24 right-2 absolute w-40 bg-white rounded flex flex-col tracking-wide border border-solid border-[#F4F4F4] shadow-md p-2
 }
 
 .moremenu button,
 .moremenu a {
     @apply transform transition font-normal text-[0.9rem]
-    flex justify-center items-center border border-transparent 
+    flex justify-start items-center border border-transparent 
     bg-transparent text-gray-800
     px-4 py-[0.37rem] 
     no-underline
     focus:outline-none focus:ring-transparent shadow-none rounded
-    hover:bg-indigo-500 hover:text-white 
+    hover:bg-[#F4F4F4]
 }
 
 .moremenu .active {
-    @apply bg-indigo-500 text-white
+    @apply bg-[#F4F4F4]
 }
 
 .menuseparator {
-    @apply m-1 border-t border-gray-300
+    @apply my-1 border-t border-[#F4F4F4]
 }
 
 .inputrows {
