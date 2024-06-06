@@ -71,7 +71,7 @@ function Account(props) {
     }
 
     return <>
-        <button className='button-normal mr-2' onClick={openModalHandler}>Account</button>
+        <button className='button-normal w-full justify-start hover:bg-gray-100' onClick={openModalHandler}>Account</button>
 
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog
@@ -81,7 +81,7 @@ function Account(props) {
 
             <Notif mode={notif.mode} text={notif.text} duration={notif.duration} />
 
-            <div className="min-h-screen px-4 text-center">
+            <div className="min-h-screen px-4 text-center w-full">
                 <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-100"
@@ -91,7 +91,7 @@ function Account(props) {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
                 >
-                <Dialog.Overlay className="fixed inset-0" />
+                <Dialog.Overlay className="fixed inset-0 backdrop-blur-sm bg-black/50" />
                 </Transition.Child>
 
                 {/* This element is to trick the browser into centering the modal contents. */}

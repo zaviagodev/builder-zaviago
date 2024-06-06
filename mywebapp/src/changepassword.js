@@ -67,7 +67,7 @@ function ChangePassword(props) {
 
             <Notif mode={notif.mode} text={notif.text} duration={notif.duration} />
 
-            <div className="min-h-screen px-4 text-center">
+            <div className="min-h-screen px-4 text-center w-full">
 
                 <Transition.Child
                     as={Fragment}
@@ -77,7 +77,7 @@ function ChangePassword(props) {
                     leave="ease-in duration-100"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0">
-                    <Dialog.Overlay className="fixed inset-0" />
+                    <Dialog.Overlay className="fixed inset-0 backdrop-blur-sm bg-black/50" />
                 </Transition.Child>
 
                 {/* This element is to trick the browser into centering the modal contents. */}

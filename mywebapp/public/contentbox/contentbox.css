@@ -1973,9 +1973,9 @@ body.frame-center.controlpanel .is-content-view {
   color: #c7c7c7;
   background-color: #7676803D;
 }
-.dark .builder-ui input[type=checkbox] {
+/* .dark .builder-ui input[type=checkbox] {
   opacity: 0.7;
-}
+} */
 .dark .builder-ui select {
   color: #c7c7c7;
   background-color: #313131;
@@ -2995,6 +2995,14 @@ body.fullview.topspace .is-content-view iframe {
 .dark #_cbhtml .div-anim-apply-to .flex-nowrap,
 .dark #_cbhtml .anim-controls .flex-nowrap {
   background: #7676803D;
+}
+
+.dark #_cbhtml button, 
+.dark #_cbhtml .is-btn, 
+.dark .is-ui button, 
+.dark .is-ui .is-btn {
+  background: #7676803D;
+  color: #fff;
 }
 
 .dark #_cbhtml .cmd-target,

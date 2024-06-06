@@ -39,7 +39,7 @@ function SelectAsset(props) {
             className={`${styles.dashboard} fixed inset-0 z-10 overflow-y-auto`}
             onClose={closeModal}>
 
-            <div className="min-h-screen px-4 text-center">
+            <div className="min-h-screen px-4 text-center w-full">
                 <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-100"
@@ -49,7 +49,7 @@ function SelectAsset(props) {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
                 >
-                <Dialog.Overlay className="fixed inset-0" />
+                <Dialog.Overlay className="fixed inset-0 backdrop-blur-sm bg-black/50" />
                 </Transition.Child>
 
                 {/* This element is to trick the browser into centering the modal contents. */}
