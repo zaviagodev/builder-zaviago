@@ -140,8 +140,8 @@ function User(props) {
                 </>}</h4>
                 <div className='text-sm text-[#929292]'>{props.email}</div>
             </div>
-            {props.domainName?<div className='mt-3 text-sm'>{props.domainName}</div>:
-            <div className='mt-3 text-sm text-gray-400'>No Domain</div>}
+            {props.domainName?<div className='text-sm'>{props.domainName}</div>:
+            <div className='text-sm text-gray-400'>No Domain</div>}
 
         <Menu as="div" className={styles.more}>
                 
@@ -270,7 +270,7 @@ function User(props) {
                                     checked={enabled}
                                     onChange={setEnabled}
                                     className={`${
-                                        enabled ? 'bg-indigo-600' : 'bg-gray-200'
+                                        enabled ? '!bg-indigo-600' : '!bg-gray-200'
                                     } relative inline-flex items-center h-7 rounded-full w-12 px-0 justify-start`}
                                     >
                                     <span className="sr-only">Active</span>

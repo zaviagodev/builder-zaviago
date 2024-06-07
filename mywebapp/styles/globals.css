@@ -63,7 +63,7 @@
 
 @layer components {
   .button-normal {
-    @apply px-4 py-2 transform transition font-normal text-sm rounded-md bg-white text-gray-800
+    @apply px-4 py-2 transform transition font-medium text-xs rounded-md bg-white text-gray-800
     flex justify-center items-center border border-transparent focus:outline-none 
   }
   .button-normal[disabled] {
@@ -2705,8 +2705,8 @@ button, a.btn {
 }
 
 button svg, a.btn svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   flex: none;
 }
 
