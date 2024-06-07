@@ -31,6 +31,10 @@ function Dashboard(props) {
         await signOut({redirect: false});
     }
 
+    const bgGradient = {
+        background:"linear-gradient(90deg, rgb(248, 247, 247) 0%, rgb(44, 44, 46) 100%)"
+    }
+
     return <>
         <div className={styles.dashboard}>
             <div className={`${isSidebarOpen ? 'bg-black/50 w-screen h-screen fixed top-0 left-0 lg:hidden z-[8]' : ''}`} onClick={() => setIsSidebarOpen(false)}></div>
@@ -76,6 +80,14 @@ function Dashboard(props) {
                             <Menu.Items className={`${styles.moremenu} focus:outline-none !top-12`}>
                                 <Menu.Item>
                                     {({ active }) => (
+                                        <button className={`${active ? styles.active : ""}`} title={'Logout'} onClick={() => window.location.href = '/admin'}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-hotel"><path d="M10 22v-6.57"/><path d="M12 11h.01"/><path d="M12 7h.01"/><path d="M14 15.43V22"/><path d="M15 16a5 5 0 0 0-6 0"/><path d="M16 11h.01"/><path d="M16 7h.01"/><path d="M8 11h.01"/><path d="M8 7h.01"/><rect x="4" y="2" width="16" height="20" rx="2"/></svg>
+                                            Admin
+                                        </button>
+                                    )}
+                                </Menu.Item>
+                                <Menu.Item>
+                                    {({ active }) => (
                                         <button className={`${active ? styles.active : ""}`} title={'Logout'} onClick={logoutHandler}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
                                             Logout
@@ -99,8 +111,14 @@ function Dashboard(props) {
                                 <Page key={page.slug} slug={page.slug} title={page.title} online={page.online} mainHost={props.mainHost} onUpdate={getPages} />
                             )
                         }):
-                        <div className={styles.dashboard}>
-                            <p>Loading...</p>
+                        // <div className={styles.dashboard}>
+                        <div className='flex justify-center w-full mt-8'>
+                            <div className='flex flex-col items-center gap-2'>
+                                <div className="animate-spin w-12 h-12 flex justify-center items-center rounded-full" style={bgGradient}>
+                                    <div className="bg-white w-10 h-10 rounded-full" />
+                                </div>
+                                <p>Loading...</p>
+                            </div>
                         </div>
                     }
                 </div>       

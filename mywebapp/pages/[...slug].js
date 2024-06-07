@@ -18,8 +18,10 @@ function Home(props) {
                 <title>404</title>
                 <link rel="icon" href="/images/favicon.ico" />
             </Head>
-            <h1>404</h1>
-            <p>Oops! Page Not Found.</p>
+            <div className='flex flex-col gap-4 items-center justify-center h-screen text-red-500'>
+                <h1 className='text-6xl font-bold'>404 NOT FOUND</h1>
+                <p>We're sorry, but the page you are looking for is not found.</p>
+            </div>
         </>
     } else {
         if(props.mainHost && props.siteOwner!=='admin' && props.customDomainOnly) {
